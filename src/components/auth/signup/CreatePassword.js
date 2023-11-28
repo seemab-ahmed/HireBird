@@ -4,7 +4,10 @@ import { Buttonicn, Psw, ShowPsw } from "../../../assets/Svgs";
 import { useNavigate } from "react-router-dom";
 import Button from "../../view-comp/Button";
 export default function CreatePassword() {
-  const navigate = useNavigate();
+  const nav = useNavigate();
+  const navigate=()=>{
+    nav("/")
+  }
   return (
     <div className="pt-32">
       <div className="flex flex-col justify-center items-center mt-5">
@@ -70,7 +73,6 @@ export default function CreatePassword() {
                   Don't have an account?
                 </p>
                 <p className="text-[#61D180] hover:cursor-pointer text-sm">
-                  {" "}
                   sign up
                 </p>
               </div>

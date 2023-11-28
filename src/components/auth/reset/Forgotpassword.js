@@ -59,7 +59,7 @@ export default function Forgotpassword() {
                 <p
                   className="text-[#61D180] hover:cursor-pointer text-sm"
                   onClick={() => {
-                    nav("/");
+                    nav("/createaccount");
                   }}
                 >
                   {" "}
