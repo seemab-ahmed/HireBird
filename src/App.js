@@ -6,6 +6,7 @@ import Resetsuccess from './components/auth/reset/Resetsuccess';
 import CreatePassword from './components/auth/signup/CreatePassword';
 import Createaccount from './components/auth/signup/Createaccount';
 import RoleSelect from './components/auth/signup/RoleSelect';
+import ProfileView from './components/ProfileView/ProfileView';
 import {
   BrowserRouter as Router,
   Routes,
@@ -32,6 +33,7 @@ function App() {
           <Route path="/Forgotpassword" element={ <Forgotpassword/>} />
           <Route path="/Resetpassword" element={ <Resetpassword/>} />
           <Route path="/Resetsuccess" element={ <Resetsuccess/>} />
+          <Route path= "/profile" element={<ProfileView />} />
          </Routes>
         </Router>
   
