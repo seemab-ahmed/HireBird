@@ -1,0 +1,29 @@
+*{
+  
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+}
+body{
+  background-color: black;
+}
+h1,h2, h3,h4,h5,h6 ,p{
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+button{
+  color: white;
+}
+.bordered{
+  border: 2px solid #61d18112;
+}
+.border-red-span{
+  border-right: 1px solid #ffffff36;
+}
+.btn{
+  background: linear-gradient(90deg,rgba(97,209,128,1) 40%, rgba(2,48,32,1) 100%);
+}
+.btnn:hover{
+  background: linear-gradient(90deg,rgba(97,209,128,1) 40%, rgba(2,48,32,1) 100%);
+}
