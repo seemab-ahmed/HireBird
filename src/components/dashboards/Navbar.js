@@ -71,7 +71,7 @@ const Navbar = ({setCollapsed,isCollapsed}) => {
           Home
         </a>
         <a
-          href="/"
+          href="/profile"
           className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
         >
           About

@@ -1,15 +1,20 @@
 import React from "react";
 import Button from "../../view-comp/Button";
 import { Applicants, Briefcase, Impression } from "../../../assets/Svgs";
+import { useNavigate } from "react-router-dom";
 import ApplicantTable from "./ApplicantTable";
 export default function Dashboard() {
+  const nav = useNavigate();
+  const navigate = () => {
+    nav("/profile");
+  };
   return (
     <>
       <div className="px-8 ">
         <div className="flex justify-between items-center py-8">
           <h2 className="text-5xl"> Dashboard</h2>
           <div className="w-56">
-            <Button text={"Manage job posts"} />
+            <Button text={"Manage job posts"} navigate={navigate} />
           </div>
         </div>
         <div className="lg:flex block justify-between items-center  pb-8">

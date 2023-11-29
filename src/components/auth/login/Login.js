@@ -17,7 +17,7 @@ export default function Login({settoken}) {
           <h1 className="text-5xl font-thin mb-4"> Sign in </h1>
           <p className="text-[#ffffff70]">Sign in here to continue.</p>
           <div className="w-full">
-            <button className="flex justify-center items-center h-[55px] w-full rounded-[10px] bg-[#EA4335] my-6">
+            <button className="flex justify-center items-center h-[55px] w-full rounded-[10px] bg-[#EA4335] my-6" onClick={()=>nav("/profile")}>
               <Google /> <span className="ms-5"> Sign in with Google</span>
             </button>
             <div className="flex justify-center items-center gap-3 mb-5">
