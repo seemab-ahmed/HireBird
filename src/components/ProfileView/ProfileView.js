@@ -9,10 +9,13 @@ import { ReactComponent as EducationIcon } from "../../assets/EducationIcon.svg"
 import { ReactComponent as PersonIcon } from "../../assets/PersonIcon.svg";
 import { ReactComponent as ExperienceIcon } from "../../assets/ExperienceIcon.svg";
 import { ReactComponent as SkillsIcon } from "../../assets/SkillsIcon.svg";
+import { ReactComponent as ContactIcon } from "../../assets/contactIcon.svg";
+import { ReactComponent as LocationIcon } from "../../assets/locationIcon.svg";
 import ProgressBar from "../view-comp/ProgressBar";
 import manImage from "../../assets/Man.png";
 
 import CardItem from "../view-comp/CardItem";
+import Button from "../view-comp/Button";
 export default function ProfileView() {
   const itemDescription = "I'm Cam! A highly motivated individual passionate about sales and marketing. With a strong work ethic and commitment to excellence, I strive for success. Growing up in Utah, I developed a love for the outdoors, spending free time exploring mountains and forests. As an avid snowboarder, carving down slopes gives me a thrill. In my academic journey, I found a deep interest in sales and marketing, recognizing its role in business growth. With a natural ability to connect with others and curiosity about consumer behavior, I excel in sales, marketing, and related fields.";
   const EducationItems = [
@@ -120,6 +123,35 @@ export default function ProfileView() {
                 desc="895"
                 Icon={<ViewIcon />}
               />
+              <div className="flex justify-center items-center mt-6">
+      <div className="container mx-auto items-center bg-[#191A1E] rounded-lg border border-[#61d1815b]">
+        <div className="flex flex-col justify-between items-center w-full px-8 md:flex-row ">
+            <div className="flex gap-2 items-center justify-between w-full mt-3 pb-4 border-b-2 border-[#61d1815b]">
+            <div className="flex gap-2">
+            <ContactIcon />
+              <p className="leading-snug text-3xl text-[#fff] mb-2 font-bold">
+              Contact Cameron
+              </p>
+              </div>
+              </div>
+          </div>   
+          <div className="w-full px-8 py-8">
+              <div className="flex gap-2">
+              <LocationIcon />
+              <p className="text-[#ffffff70] text-sm">
+                <span className="text-[#ffffff70] font-bold">
+                cameronallen77@gmail.com
+                </span>
+              </p>
+              </div>
+              </div>
+              <Button
+                text={"Next step"}
+                navigate={123}
+              />    
+      </div>
+    </div>
+
               <image src={manImage} />
             </div>
           </div>
