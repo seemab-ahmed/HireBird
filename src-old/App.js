@@ -17,7 +17,6 @@ import Sidebar from './components/dashboards/Sidebar';
 import Navbar from './components/dashboards/Navbar';
 import Dashboard from './components/dashboards/dashboard/Dashboard';
 import CreateJob from './components/dashboards/dashboard/createJob';
-import CompanyDetailPage from './components/ProfileView/CompanyProfileDetail';
 function App() {
   const [token , settoken] = useState(false)
   const [isCollapsed, setCollapsed] = useState(true);
@@ -36,7 +35,6 @@ function App() {
           <Route path="/Resetpassword" element={ <Resetpassword/>} />
           <Route path="/Resetsuccess" element={ <Resetsuccess/>} />
           <Route path= "/profile" element={<ProfileView />} />
-          <Route path= "/company-detail" element={<CompanyDetailPage />} />
          </Routes>
         </Router>
   
@@ -44,6 +42,7 @@ function App() {
     </div>
   );
 }
+if(token===true){
   return(
     <Router>
     <div className="flex">
@@ -52,12 +51,13 @@ function App() {
         <Navbar setCollapsed={setCollapsed} isCollapsed={isCollapsed} />
         <Routes>
           <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/createJob" element={<CreateJob />} /> 
+          <Route path="/createJob" element={<CreateJob />} />
           </Routes>
           </div>
         </div>
       </Router>
   )
+}
 }
 
 export default App;

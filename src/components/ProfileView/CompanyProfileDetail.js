@@ -17,7 +17,7 @@ import manImage from "../../assets/Man.png";
 
 import CardItem from "../view-comp/CardItem";
 import Button from "../view-comp/Button";
-export default function ProfileView() {
+export default function CompanyProfileDetail() {
   const itemDescription =
     "I'm Cam! A highly motivated individual passionate about sales and marketing. With a strong work ethic and commitment to excellence, I strive for success. Growing up in Utah, I developed a love for the outdoors, spending free time exploring mountains and forests. As an avid snowboarder, carving down slopes gives me a thrill. In my academic journey, I found a deep interest in sales and marketing, recognizing its role in business growth. With a natural ability to connect with others and curiosity about consumer behavior, I excel in sales, marketing, and related fields.";
   const EducationItems = [
