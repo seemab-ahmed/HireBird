@@ -18,6 +18,7 @@ import Navbar from './components/dashboards/Navbar';
 import Dashboard from './components/dashboards/dashboard/Dashboard';
 import CreateJob from './components/dashboards/dashboard/createJob';
 import CompanyDetailPage from './components/ProfileView/CompanyProfileDetail';
+import CompanyDetail from './components/ProfileView/CompanyDetail';
 function App() {
   const [token , settoken] = useState(false)
   const [isCollapsed, setCollapsed] = useState(true);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/Resetsuccess" element={ <Resetsuccess/>} />
           <Route path= "/profile" element={<ProfileView />} />
           <Route path= "/company-detail" element={<CompanyDetailPage />} />
+          <Route path= "/profile-detail" element={<CompanyDetail />} />
          </Routes>
         </Router>
   

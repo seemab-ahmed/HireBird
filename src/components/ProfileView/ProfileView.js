@@ -11,13 +11,17 @@ import { ReactComponent as ExperienceIcon } from "../../assets/ExperienceIcon.sv
 import { ReactComponent as SkillsIcon } from "../../assets/SkillsIcon.svg";
 import { ReactComponent as ContactIcon } from "../../assets/contactIcon.svg";
 import { ReactComponent as LocationIcon } from "../../assets/locationIcon.svg";
-import { ReactComponent as ManImg } from "../../assets/ManImage.svg";
 import ProgressBar from "../view-comp/ProgressBar";
 import manImage from "../../assets/Man.png";
 
 import CardItem from "../view-comp/CardItem";
 import Button from "../view-comp/Button";
+import { useNavigate } from "react-router-dom";
 export default function ProfileView() {
+  const nav = useNavigate();
+  const navigate=()=>{
+    nav("/company-detail")
+  }
   const itemDescription =
     "I'm Cam! A highly motivated individual passionate about sales and marketing. With a strong work ethic and commitment to excellence, I strive for success. Growing up in Utah, I developed a love for the outdoors, spending free time exploring mountains and forests. As an avid snowboarder, carving down slopes gives me a thrill. In my academic journey, I found a deep interest in sales and marketing, recognizing its role in business growth. With a natural ability to connect with others and curiosity about consumer behavior, I excel in sales, marketing, and related fields.";
   const EducationItems = [
@@ -76,6 +80,13 @@ export default function ProfileView() {
       percentage: "45%",
     },
   ];
+  const ProfileRatingItems = [
+    {
+      itemTitle: "Views",
+      desc: "895",
+      Icon: <ViewIcon />,
+    },
+  ];
   return (
     <>
       <Navbar />
@@ -126,9 +137,7 @@ export default function ProfileView() {
             <div className="col-span-1 gap-y-8">
               <ProfileRatingCard
                 title="Overview"
-                itemTitle="Views"
-                desc="895"
-                Icon={<ViewIcon />}
+                ProfileRatingItems={ProfileRatingItems}
               />
               <div className="flex justify-center items-center mt-6">
                 <div className="container mx-auto items-center bg-[#191A1E] rounded-lg border border-[#61d1815b]">
@@ -153,7 +162,7 @@ export default function ProfileView() {
                     </div>
                   </div>
                   <div className="px-8 pb-8">
-                    <Button text={"Next step"} navigate={123} />
+                    <Button text={"Next step"} navigate={navigate} />
                   </div>
                 </div>
               </div>

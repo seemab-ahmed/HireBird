@@ -1,11 +1,16 @@
 import React from "react";
 import Logo from "../../assets/Hirebird_Whitebanner 1.png";
+import { useNavigate } from "react-router-dom";
 const Navbar = ({setCollapsed,isCollapsed}) => {
 
   const toggleCollapse = () => {
     setCollapsed(!isCollapsed);
   };
 
+  const nav = useNavigate();
+  const navigate=()=>{
+    nav("/profile-detail")
+  }
   return (
     <nav className="px-6 h-[110px] flex justify-center items-center">
       <div className="container mx-auto flex items-center justify-between">
@@ -44,7 +49,8 @@ const Navbar = ({setCollapsed,isCollapsed}) => {
             Feed
           </a>
           <a
-            href="/"
+            href="/profile-detail"
+            onClick={navigate}
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300"
           >
            My Profile
