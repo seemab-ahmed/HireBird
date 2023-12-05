@@ -48,7 +48,7 @@ function App() {
 }
   return(
     <Router>
-    <div className="flex">
+    <div className="flex h-full justify-start">
       <Sidebar setActiveButton={setActiveButton} activeButton={activeButton} />
       <div className="w-full">
         <Navbar setCollapsed={setCollapsed} isCollapsed={isCollapsed} />

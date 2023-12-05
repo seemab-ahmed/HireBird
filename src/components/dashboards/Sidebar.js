@@ -12,7 +12,7 @@ export default function Sidebar({setActiveButton,activeButton}) {
     };
   
     return (
-      <div className="bg-[#191A1E]  w-[300px] flex justify-center items-center flex-col px-5 border-r-[#61d1812f] border-r-2 ">
+      <div className="bg-[#191A1E]  min-w-[300px] flex items-center flex-col px-5 border-r-[#61d1812f] border-r-2 ">
         <img src={H} alt="ERR" className="h-[6em] w-64" />
         <div className="flex flex-col justify-start items-start w-full gap-4">
           <button
