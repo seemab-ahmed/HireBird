@@ -24,7 +24,7 @@ export default function Createaccount() {
             </button>
             <div className="flex justify-center items-center gap-3 mb-5">
               <span className="bg-[#61d18112] h-[2px] w-full"></span>
-              <p className="text-[#ffffff70] w-full">Or Sign in with Email</p>
+              <p className="text-[#ffffff70] w-full text-center">Or Sign in with Email</p>
               <span className="bg-[#61d18112]  h-[2px] w-full"></span>
             </div>
             <div className="flex justify-center items-center w-full h-[55px]  rounded-[10px] bordered bg-[#1D1D1D]  mb-4">

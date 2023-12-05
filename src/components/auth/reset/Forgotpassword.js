@@ -9,7 +9,7 @@ export default function Forgotpassword() {
     nav("/Resetpassword");
   };
   return (
-    <div className="pt-32">
+    <div className="md:pt-32">
       <div className="flex flex-col justify-center items-center mt-5">
         <img src={H} alt="err" className="mb-8" />
         <form className=" lg:w-4/12 md:w-4/6 w-11/12 bg-[#191A1E] flex flex-col justify-center items-center lg:py-10 md:py-8 py-6 lg:px-8 md:px-8 px-6 rounded-md mx-4">
