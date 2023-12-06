@@ -13,10 +13,10 @@ export default function RoleSelect() {
           <h1 className="text-3xl font-thin mb-10"> Please select your role </h1>
           <div className="w-full">
           <div className="flex justify-evenly">
-          <div className="px-2  md:px-6   xl:px-12 h-[190px] border border-[#61d18117] bg-[#1D1D1D] rounded-[10px] flex justify-center items-center" onClick={()=>{navigate("/createaccount")}}>
+          <div className="px-2  md:px-6   xl:px-12 h-[190px] border border-[#61d18117] bg-[#1D1D1D] rounded-[10px] flex justify-center items-center hover:border-1 hover:border-[#61D180] cursor-pointer" onClick={()=>{navigate("/profile")}}>
               <Jobselector />
             </div>
-            <div className="px-2  md:px-6 xl:px-12 h-[190px] border border-[#61d18117] bg-[#1D1D1D] rounded-[10px] flex justify-center items-center" onClick={()=>{navigate("/createaccount")}}>
+            <div className="px-2  md:px-6 xl:px-12 h-[190px] border border-[#61d18117] bg-[#1D1D1D] rounded-[10px] flex justify-center items-center hover:border-1 hover:border-[#61D180] cursor-pointer" onClick={()=>{navigate("/createaccount")}}>
               <Jobrec />
             </div>
           </div>
