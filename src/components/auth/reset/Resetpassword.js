@@ -43,7 +43,7 @@ export default function Resetpassword() {
             <div className="mb-5">
               <Button
                 icon2={<Buttonicn />}
-                text={"Next step"}
+                text={"Reset password"}
                 navigate={navigate}
               />
             </div>

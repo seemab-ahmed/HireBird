@@ -3,6 +3,8 @@ import H from "../../../assets/Hirebird_Whitebanner 1.png";
 import Button from "../../view-comp/Button";
 import { Buttonicn, Msg, Psw, ShowPsw, Google } from "../../../assets/Svgs";
 import { useNavigate } from "react-router-dom";
+import LoginImage from "../../../assets/login.png";
+
 export default function Login({settoken}) {
   const nav = useNavigate();
   const navigate=()=>{
@@ -11,9 +13,13 @@ export default function Login({settoken}) {
   }
   return (
     <div className="py-10">
-      <div className="flex flex-col justify-center items-center mt-5">
-        <img src={H} alt="err" className="mb-8" />
-        <form className=" lg:w-1/3 md:w-4/6 w-11/12 bg-[#191A1E] flex flex-col justify-center items-center lg:py-14 md:py-8 py-6 lg:px-10 md:px-8 px-6 rounded-md mx-4">
+      <div className="flex flex-col lg:flex-row justify-around gap-8">
+      <div className="flex flex-col justify-center items-center mt-[50px] flex-1">
+        <img src={LoginImage} alt="forgotpassword"  />
+      </div>
+      <div className="flex flex-col justify-center items-center mt-5 flex-1">
+        <img src={H} alt="err" className="mb-8 items-center" />
+        <form className=" lg:w-9/12 md:w-4/6 w-11/12 bg-[#191A1E] flex flex-col justify-center items-center lg:py-14 md:py-8 py-6 lg:px-10 md:px-8 px-6 rounded-md mx-4">
           <h1 className="text-5xl font-thin mb-4"> Sign in </h1>
           <p className="text-[#ffffff70]">Sign in here to continue.</p>
           <div className="w-full">
@@ -89,6 +95,7 @@ export default function Login({settoken}) {
             </div>
           </div>
         </form>
+      </div>
       </div>
     </div>
   );
