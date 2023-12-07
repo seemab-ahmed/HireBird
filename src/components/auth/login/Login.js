@@ -4,7 +4,7 @@ import Button from "../../view-comp/Button";
 import { Buttonicn, Msg, Psw, ShowPsw, Google } from "../../../assets/Svgs";
 import { useNavigate } from "react-router-dom";
 import LoginImage from "../../../assets/login.png";
-
+import Checkbox from '@mui/material/Checkbox';
 export default function Login({settoken}) {
   const nav = useNavigate();
   const navigate=()=>{
@@ -54,13 +54,15 @@ export default function Login({settoken}) {
             </div>
             <div class="flex justify-between items-start w-full mb-7">
               <div class="flex items-center h-5 gap-3">
-                <input
-                  id="terms"
-                  aria-describedby="terms"
-                  type="checkbox"
-                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                  required=""
-                />
+              <Checkbox
+                defaultChecked
+                sx={{
+                  color: '#ffffff36',
+                  '&.Mui-checked': {
+                    color: '#61D180',
+                  },
+                }}
+              />
                 <p className="text-[#ffffff70] text-sm">Remember Me</p>
               </div>
               <div>

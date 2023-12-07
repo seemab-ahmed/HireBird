@@ -1,7 +1,7 @@
 import React from "react";
 import { Searchbar } from "../../assets/Svgs";
 import CustomDdown from "./CustomDdown";
-
+import { ReactComponent as Notification } from "../../assets/notification.svg";
 const Navbar = ({setCollapsed,isCollapsed}) => {
 
   const toggleCollapse = () => {
@@ -45,12 +45,9 @@ const Navbar = ({setCollapsed,isCollapsed}) => {
 
         <div className="lg:flex justify-center items-center gap-4 hidden">
         <CustomDdown/>    
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-          >
-            About
-          </a>
+          <div>
+            <Notification />
+          </div>
           <a
             href="/"
             className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300"

@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { BiFlag } from 'react-icons/bi';
+import { ReactComponent as LanguageIcon } from "../../assets/lang.svg"
+import { ReactComponent as DropDownIcon } from "../../assets/SelectDropDown.svg"
 
 const CustomDdown = () => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [open, setopen] = useState(null);
 
   const options = [
-    { label: 'United States', flag: <BiFlag /> },
-    { label: 'United Kingdom', flag: <BiFlag /> },
-    { label: 'France', flag: <BiFlag /> },
+    { label: 'Eng (US)', flag: <LanguageIcon /> },
+    { label: 'Eng (UK)', flag: <LanguageIcon /> },
+    { label: 'France', flag: <LanguageIcon /> },
     
   ];
 
@@ -24,26 +25,30 @@ const CustomDdown = () => {
         <button
           type="button"
           onClick={()=>{setopen(!open)}}
-          className="w-52 inline-flex justify-center  rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="w-40 inline-flex justify-between  rounded-md border-none shadow-sm px-4 py-2 text-sm font-medium text-gray-700 focus:outline-none"
         >
           {selectedOption ? (
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2  text-white">
               <span>{selectedOption.flag}</span>
               <span>{selectedOption.label}</span>
             </div>
           ) : (
-            'Select a country'
+            <div className="flex items-center space-x-2 text-white">
+              <span><LanguageIcon /></span>
+              <span>Eng (US)</span>
+            </div>
           )}
+          <DropDownIcon />
         </button>
       </div>
 
-      <div className={`origin-top-right ${open?"flex":"hidden"} justify-center absolute right-0 mt-2 w-52 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5`}>
+      <div className={`origin-top-right ${open?"flex":"hidden"} justify-center absolute bg-[#4b4a4ac0] right-0 mt-2 w-40 rounded-md shadow-lg ring-1 ring-black ring-opacity-5`}>
         <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
           {options.map((option, index) => (
             <button
               key={index}
               onClick={() => handleSelect(option)}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+              className="block px-4 py-2 text-sm text-white hover:text-gray-900"
               role="menuitem"
             >
               <div className="flex items-center space-x-2">

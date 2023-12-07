@@ -1,6 +1,9 @@
 import React from "react";
 import { Searchbar } from "../../assets/Svgs";
 import CustomDdown from "./CustomDdown";
+import { ReactComponent as Notification } from "../../assets/notification.svg";
+import { ReactComponent as NavPerson } from "../../assets/NavPerson.svg";
+import { ReactComponent as DropDownIcon } from "../../assets/SelectDropDown.svg"
 
 const Navbar = ({setCollapsed,isCollapsed}) => {
 
@@ -16,7 +19,7 @@ const Navbar = ({setCollapsed,isCollapsed}) => {
             <Searchbar />
           </span>
           <input
-            className="w-full h-full border-white bg-transparent placeholder-[#ffffff36]  text-[#ffffff81] text-sm"
+            className="w-full h-full border-white bg-transparent placeholder-[#ffffff36]  text-[#ffffff81] text-md focus:outline-none"
             placeholder="Search here..."
           />
         </div>
@@ -43,45 +46,25 @@ const Navbar = ({setCollapsed,isCollapsed}) => {
           </button>
         </div>
 
-        <div className="lg:flex justify-center items-center gap-4 hidden">
-        <CustomDdown/>    
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-          >
-            About
-          </a>
-          <a
-            href="/"
-            className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300"
-          >
-            Contact
-          </a>
+        <div className="lg:flex justify-center items-center gap-6 hidden">
+        {/* <CustomDdown/>  
+           */}
+
+           <div>
+            <CustomDdown />
+           </div>
+          <div className=" bg-gray-600 rounded-md p-3">
+            <Notification />
+          </div>
+          <div className="flex gap-4">
+          <NavPerson />
+          <div>
+          <p className="text-white">Alex Khan</p>
+          <p className="text-gray-700">My Account</p>
+          </div>
+          <DropDownIcon />
+          </div>
         </div>
-      </div>
-      <div
-        className={`lg:hidden  flex ${
-          isCollapsed ? "hidden" : "flex"
-        } flex-col lg:flex-row items-center`}
-      >
-        <a
-          href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-        >
-          Home
-        </a>
-        <a
-          href="/profile"
-          className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300 mr-4"
-        >
-          About
-        </a>
-        <a
-          href="/"
-          className="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-gray-300"
-        >
-          Contact
-        </a>
       </div>
     </nav>
   );
