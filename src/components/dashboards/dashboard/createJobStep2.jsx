@@ -7,7 +7,7 @@ import Step3Icon from "../../../assets/step-3.svg";
 import Step4Icon from "../../../assets/step-4.svg";
 import checkIcon from "../../../assets/icon-park-solid_check-one.png";
 
-const CreateJobStep2 = () => {
+const CreateJobStep2 = ({onNextStep, progress}) => {
   return (
     <div className="px-8 mb-20 ">
       <div className="flex justify-between items-center py-8">
@@ -16,13 +16,13 @@ const CreateJobStep2 = () => {
       <div className=" px-[30px] border_green bg-[#191A1E] pt-[87px] rounded-lg">
         <div className="relative ">
           <div className="bg-[#47484B] h-1 w-full py-1 rounded"></div>
-          <div className="bg-[#61D180] absolute h-2 w-[353px] rounded py-1 top-0 "></div>
+          <div className="bg-[#61D180] absolute h-2 rounded py-1 top-0 " style={{width:`${progress}%`}}></div>
         </div>
         <div className="flex mt-5 text-white justify-between">
           <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
+          <div className="text-xl font-extralight">Step 2</div>
+          <div className="text-xl font-extralight">Step 3</div>
+          <div className="text-xl font-extralight">Step 4</div>
         </div>
         <div className="mt-[55px]">
           <h3 className="text-[22px] font-extralight mb-10">
@@ -74,7 +74,7 @@ const CreateJobStep2 = () => {
           </div>
         </div>
         <div className="my-32 w-56 ml-auto">
-          <Button text={"Next"} />
+          <Button text={"Next"} navigate={()=>onNextStep("step3")}/>
         </div>
       </div>
     </div>

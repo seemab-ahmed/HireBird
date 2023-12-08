@@ -8,7 +8,7 @@ import IIcon from "../../../assets/ibtn.png";
 
 import PopUp from "./Popup";
 
-const CreateJobStep4 = () => {
+const CreateJobStep4 = ({onNextStep,progress}) => {
   const [showPopup, setShowPopup] = useState(false);
 
   const HandleOpen = () => {
@@ -27,13 +27,13 @@ const CreateJobStep4 = () => {
       <div className=" px-[30px] border_green bg-[#191A1E] pt-[87px] rounded-lg">
         <div className="relative ">
           <div className="bg-[#47484B] h-1 w-full py-1 rounded"></div>
-          <div className="bg-[#61D180] absolute h-2 w-[353px] rounded py-1 top-0 "></div>
+          <div className="bg-[#61D180] absolute h-2 w-[353px] rounded py-1 top-0 " style={{ width: `${progress}%` }}></div>
         </div>
         <div className="flex mt-5 text-white justify-between">
-          <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
-          <div className="text-xl font-extralight">Step 1</div>
+        <div className="text-xl font-extralight">Step 1</div>
+        <div className="text-xl font-extralight">Step 2</div>
+        <div className="text-xl font-extralight">Step 3</div>
+        <div className="text-xl font-extralight">Step 4</div>
         </div>
         <div className="mt-[55px]">
           <div>
@@ -134,6 +134,7 @@ const CreateJobStep4 = () => {
       {showPopup && (
         <PopUp
           onClose={closePopup}
+          onNextButton={()=>onNextStep("step5")}
           description="Boost your post to reach out to a bigger candidate base"
           secondaryButtonText="No Thanks"
           primaryButtonText="Yes, boost to reach a larger audience!"
